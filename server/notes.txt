@@ -1,0 +1,109 @@
+APP MAIN METHODS
+app.get(path, handler)
+    Handle GET requests
+    Used for reading/fetching data
+
+app.post(path, handler)
+    Handle POST requests
+    Used for sending/creating data
+
+app.put(path, handler)
+    Handle PUT requests
+    Used for updating/replacing data
+
+app.delete(path, handler)
+    Handle DELETE requests
+    Used for deleting data
+
+app.patch(path, handler)
+    Handle partial updates to data
+    app.use(middleware)
+    Add middleware functions (like express.json())
+    Runs for every request unless filtered
+
+app.listen(port, callback)
+    Starts the server and begins listening for requests
+
+app.route(path)
+    Chain multiple HTTP methods for the same route
+
+
+REQ MAIN PROPERTIES AND METHODS
+
+req.method
+    The HTTP method used (GET, POST, PUT, DELETE)
+
+req.path
+    The route path the client visited
+    Example: "/hello"
+
+req.params
+    URL parameters from routes like /user/:id
+    Example: req.params.id
+
+req.query
+    Query parameters from URLs like /search?term=apple
+    Example: req.query.term
+
+req.body
+    JSON data sent in POST/PUT requests
+    Only works if express.json() middleware is enabled
+
+req.headers
+    Metadata sent by the client (tokens, content-type, etc.)
+
+req.url
+    Full URL string after the domain
+    Example: "/hello?name=tom"
+
+req.ip
+    The IP address of the client
+
+req.originalUrl
+    The original URL before routing (similar to req.url)
+
+
+RES MAIN METHODS
+
+res.send(body)
+    Sends a plain text or HTML response
+    Ends the request
+    Example: res.send("Hello")
+
+res.json(object)
+    Sends a JSON response
+    Automatically sets content-type to application/json
+    Example: res.json({ message: "ok" })
+
+res.status(code)
+    Sets the HTTP status code
+    Must be followed by send(), json(), or end()
+    Example: res.status(404).send("Not found")
+
+res.sendStatus(code)
+    Sends only a status code with its message
+    Example: res.sendStatus(200) → "OK"
+    Example: res.sendStatus(500) → "Internal Server Error"
+
+res.end()
+    Ends the response without sending any content
+    Used rarely
+    Example: res.end()
+
+res.set(header, value)
+    Set a specific HTTP response header
+    Example: res.set("X-Custom-Header", "Value")
+
+res.redirect(url)
+    Redirects the client to another URL
+    Example: res.redirect("/login")
+
+res.type(type)
+    Sets the content-type header
+    Example: res.type("text/plain")
+
+res.download(filePath)
+    Sends a file for the client to download
+
+res.sendFile(filePath)
+    Sends a file as a response (not for download)
