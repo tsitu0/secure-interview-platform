@@ -6,6 +6,6 @@ Hirely keeps the interview exactly the same, but moves the candidate into a secu
 
 Candidates check in, sit at a monitored workstation, and take their live technical interview - coding, system design, behavioral — on reliable equipment and in a distraction-free room. The interviewer connects remotely or sits on-site. Nothing about the interview changes except the environment.
 
-This project is the backend foundation for Hirely: handling slots, reservations, check-ins, and interview status using a simple Express-based API (with plans to expand into a complete MERN stack).
+This project is the backend foundation for Hirely: handling slots, reservations, check-ins, and interview status using a simple Express-based API + MongoDB (with plans to expand into a complete MERN stack).
 
 Goal: make technical interviews fair, secure, and consistent — without forcing companies to change how they already interview.
