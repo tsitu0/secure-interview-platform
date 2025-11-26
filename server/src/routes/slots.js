@@ -2,12 +2,17 @@ const express = require('express');
 const router = express.Router();
 const Slot = require('../models/Slot');
 
-// GET http://localhost:5000/api/slots
-// Return all slots
+//http://localhost:5000/api/slots
+// async lets us use await inside for MONGODB calls
 router.get('/', async (req, res) => {
   try {
-    const slots = await Slot.find().sort({ id: 1 }); // sorted by id for consistency
+    /*await -> wait for mongoDB to finish
+     Slot.find() return all slot documents
+     .sort({id:1}); sort by ascending ordering by id field
+     */
+    const slots = await Slot.find().sort({ id: 1 }); 
     res.json(slots);
+    //handle errors
   } catch (err) {
     console.error('Error fetching slots:', err);
     res.status(500).json({ error: 'Server error fetching slots' });
@@ -57,6 +62,7 @@ router.post('/reserve/:id', async (req, res) => {
     slot.candidateName = name;
     slot.checkedIn = false;
 
+    //save the changes in mongodb
     await slot.save();
 
     res.json({
@@ -118,7 +124,7 @@ router.post('/cancel/:id', async (req, res) => {
     slot.reserved = false;
     slot.candidateName = null;
     slot.checkedIn = false;
-
+    
     await slot.save();
 
     res.json({

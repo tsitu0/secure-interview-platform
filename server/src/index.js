@@ -20,6 +20,9 @@ mongoose
     console.error('❌ Error connecting to MongoDB:', err.message);
   });
 
+const blocksRouter = require('./routes/blocks');
+app.use('/api/blocks', blocksRouter);
+
 const slotsRouter = require('./routes/slots');
 app.use('/api/slots', slotsRouter);
 

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const slotSchema = new mongoose.Schema({
+  //id must be a number, always required, and unique
   id: {
     type: Number,
     required: true,
@@ -22,6 +23,10 @@ const slotSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  blockId: {
+    type: Number,
+    required: true
+  }
 });
 
 const Slot = mongoose.model('Slot', slotSchema);
