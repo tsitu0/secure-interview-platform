@@ -6,5 +6,3 @@ Hirely keeps the interview exactly the same but changes where it happens. Instea
 The long term vision is simple. Imagine these testing centers existing across the country and in major tech hubs. Companies could send candidates to the nearest site and run interviews remotely, or they could visit the center in person for on-site rounds. It would work like taking the SAT, but for technical interviews, and it would finally give everyone the same environment.
 
 This project is the backend foundation for that idea. I am building the scheduling system using Express.js and MongoDB to handle interview blocks, generated time slots, reservations, check-ins, and live interview status. This backend will later connect to a full MERN platform with proctor tools and monitoring features.
-
-The goal is clear. Technical interviews should measure skill, not distractions, hardware issues, or cheating. Hirely gives companies a way to keep their existing interview process while making the environment secure, fair, and consistent for every candidate.
