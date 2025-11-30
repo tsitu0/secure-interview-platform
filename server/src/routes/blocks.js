@@ -3,7 +3,7 @@ const router = express.Router();
 const Block = require('../models/Block');
 const Slot = require('../models/Slot');
 
-// POST /api/blocks http://localhost:5000/api/blocks
+// POST /api/blocks http://localhost:3001/api/blocks
 
 
 // Create a new interview block

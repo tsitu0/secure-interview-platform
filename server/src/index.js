@@ -6,7 +6,6 @@ const app = express();
 app.set('json spaces', 2);
 app.use(express.json());
 
-
 // 1) Connect to MongoDB (Atlas)
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -27,7 +26,7 @@ const slotsRouter = require('./routes/slots');
 app.use('/api/slots', slotsRouter);
 
 
-const PORT = process.env.PORT || 5000; 
+const PORT = 3001; 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Slot = require('../models/Slot');
 
-//http://localhost:5000/api/slots
+//http://localhost:3001/api/slots
 // async lets us use await inside for MONGODB calls
 router.get('/', async (req, res) => {
   try {
