@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const slotSchema = new mongoose.Schema({
-  //id must be a number, always required, and unique
+
   id: {
     type: Number,
     required: true,
     unique: true, 
   },
-  time: {
-    type: String,
+  slotDateTime: {    
+    type: Date,
     required: true,
   },
   reserved: {

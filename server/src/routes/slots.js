@@ -3,16 +3,10 @@ const router = express.Router();
 const Slot = require('../models/Slot');
 
 //http://localhost:3001/api/slots
-// async lets us use await inside for MONGODB calls
 router.get('/', async (req, res) => {
   try {
-    /*await -> wait for mongoDB to finish
-     Slot.find() return all slot documents
-     .sort({id:1}); sort by ascending ordering by id field
-     */
     const slots = await Slot.find().sort({ id: 1 }); 
     res.json(slots);
-    //handle errors
   } catch (err) {
     console.error('Error fetching slots:', err);
     res.status(500).json({ error: 'Server error fetching slots' });
