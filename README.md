@@ -1,11 +1,11 @@
 # Hirely — Secure Technical Interview Platform (Prototype)
-Hirely is a prototype built around a simple idea: technical interviews should be fair, secure, and consistent, but today’s remote interviews make that almost impossible. Cheating is extremely easy through hidden devices, remote helpers, or off-screen tools. Hardware quality is different for every candidate, and a noisy home environment can ruin someone’s performance. Remote interviews are convenient, but they do not create a level playing field.
+Hirely is a prototype backend for running consistent, fair technical interviews. Today’s remote interviews suffer from easy cheating, uneven hardware, and noisy environments; Hirely moves the session to a monitored testing center with standardized equipment and connectivity.
 
-Hirely keeps the interview exactly the same but changes where it happens. Instead of interviewing from home, the candidate checks in at a secure, proctored testing center. They sit at a monitored workstation with controlled hardware, stable internet, and a quiet space. The interviewer can stay remote or show up in person, and the interview format stays the same. The only difference is that cheating becomes extremely difficult and every candidate gets the same testing conditions.
+Candidates check in at a proctored workstation, while interviewers can stay remote or attend in person. The interview format stays familiar, but the environment is controlled and cheating becomes far harder.
 
-The long term vision is simple. Imagine these testing centers existing across the country and in major tech hubs. Companies could send candidates to the nearest site and run interviews remotely, or they could visit the center in person for on-site rounds. It would work like taking the SAT, but for technical interviews, and it would finally give everyone the same environment.
+The roadmap is a network of testing centers across major hubs, similar to SAT test sites, so companies can schedule remote or on-site rounds with predictable conditions.
 
-This project is the backend foundation for that idea. I am building the scheduling system using Express.js and MongoDB to handle interview blocks, generated time slots, reservations, check-ins, and live interview status. This backend will later connect to a full MERN platform with proctor tools and monitoring features.
+This repo contains the scheduling foundation built with Express.js and MongoDB: interview blocks, generated time slots, reservations, check-ins, and live status. It will later connect to a full MERN platform with proctoring and monitoring features.
 
 ## Local setup
 
